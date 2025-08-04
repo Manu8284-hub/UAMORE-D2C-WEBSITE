@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment - Uamore</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Uamore</a>
+      <div class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="#">Collections</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="cart.html" class="cart-btn">
+          <i class="fas fa-shopping-bag"></i> Cart <span class="cart-count">0</span>
+        </a>
+      </div>
+      <button class="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Payment Section -->
+  <section class="payment-section">
+    <div class="container">
+      <h2>Complete Your Purchase</h2>
+      
+      <div class="order-summary">
+        <p>Items Total: <span id="item-total">0.00</span></p>
+        <p>Shipping: <span id="shipping">4.99</span></p>
+        <h4>Total Payable: <span id="total-payable">0.00</span></h4>
+      </div>
+
+      <form id="payment-form">
+        <h3>Payment Details:</h3>
+        <input type="text" id="card-name" placeholder="Name on Card" required>
+        <input type="text" id="card-number" placeholder="Card Number" required>
+        <input type="text" id="card-expiry" placeholder="MM/YY" required>
+        <input type="text" id="card-cvv" placeholder="CVV" required>
+        <button id="pay-btn" type="submit">Pay Now</button>
+      </form>
+
+      <div id="confirmation" class="confirmation hidden">
+        <h3>✅ Payment Successful!</h3>
+        <p>Thank you for shopping with Uamore 🥰</p>
+        <a href="index.html" class="cta-btn">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="payment.js"></script>
+</body>
+</html>
